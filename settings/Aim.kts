@@ -107,6 +107,11 @@ AIM_ASSIST_STRICTNESS = 40
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
+ * This will allow you to shoot teammates with aimbot when turned on.
+ */
+TEAMMATES_ARE_ENEMIES = false
+
+/**
  * Whether or not to ignore walls when aiming.
  */
 IGNORE_WALLS = false

@@ -89,13 +89,13 @@ internal fun Entity.canShoot()
 		= spotted()
 		&& !dormant()
 		&& !dead()
-		&& me.team() != team()
+		&& (me.team() != team() || TEAMMATES_ARE_ENEMIES)
 		&& !me.dead()
 		
 internal fun Entity.canShootWall()
 		= !dormant()
 		&& !dead()
-		&& me.team() != team()
+		&& (me.team() != team() || TEAMMATES_ARE_ENEMIES)
 		&& !me.dead()
 
 internal inline fun <R> aimScript(duration: Int, crossinline precheck: () -> Boolean,
