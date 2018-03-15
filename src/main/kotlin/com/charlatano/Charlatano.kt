@@ -77,6 +77,8 @@ fun main(args: Array<String>) {
 	reducedFlash()
 	bombTimer()
 	
+	SkinChangerPlugin.skinwepindex()
+	
 	Toggles_AIM()
 	Toggles_BUNNYHOP()
 	Toggles_ESP()
