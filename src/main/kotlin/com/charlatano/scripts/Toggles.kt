@@ -34,7 +34,7 @@ fun Toggles_AIM() = every(10) {
 		} while (keyPressed(TOGGLE_KEY_AIM))
 			
 		if (HOLD_TOGGLE_AIM) 
-			ENABLE_AIM = false
+			ENABLE_AIM = true
 	}
 }
 
