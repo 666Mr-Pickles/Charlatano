@@ -38,7 +38,6 @@ internal fun reset() {
 	target.set(-1L)
 	bone.set(if (AIM_AT_HEAD) HEAD_BONE else BODY_BONE)
 	perfect.set(false)
-	Thread.sleep(AIM_TARGET_CHANGE_DELAY)
 }
 
 internal fun findTarget(position: Angle, angle: Angle, allowPerfect: Boolean,
@@ -132,8 +131,8 @@ internal inline fun <R> aimScript(duration: Int, crossinline precheck: () -> Boo
 	}
 
 	if (!currentTarget.canShootWall()) {
+		Thread.sleep(AIM_TARGET_CHANGE_DELAY)
 		reset()
-		Thread.sleep(16 + randLong(16))
 	} else if (ENABLE_AIM) {
 		val weapon = me.weapon()
 		val boneID = bone.get()
